@@ -1,24 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tugas.m1;
 
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- *
- * @author William
- */
 public class TugasM1 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         Scanner scanner = new Scanner (System.in);
         Random rand = new Random();
         
@@ -86,6 +73,7 @@ public class TugasM1 {
                 System.out.println("Error");
             }
             else {
+                
                 if (menu == 1) {
                     while (true) {
                         System.out.println("=== KELOLA MESIN ===");
@@ -200,6 +188,7 @@ public class TugasM1 {
                         }
                     }      
                 }
+                
                 else if (menu == 2) {
                     while (true) {
                         System.out.println("=== JUAL PRODUK ===");
@@ -264,6 +253,7 @@ public class TugasM1 {
                         }
                     }
                 }
+                
                 else if (menu == 3) {
                     int tempChip = 0;
                     int tempCable = 0;
@@ -310,5 +300,4 @@ public class TugasM1 {
             }
         }
     }
-    
 }
