@@ -264,7 +264,49 @@ public class TugasM1 {
                         }
                     }
                 }
-                
+                else if (menu == 3) {
+                    int tempChip = 0;
+                    int tempCable = 0;
+                    int tempScreen = 0;
+                    System.out.println("=== NEXT SHIFT ===");
+                    System.out.println("  Mesin bekerja...");
+                    System.out.println("");
+                    for (int i = 0; i < arrSlot.length; i++) {
+                        if (arrSlot[i] == '\0') {
+                            continue;
+                        }
+                        else {
+                            if (arrSlot[i] == 'C') {
+                                int chipRandomNumber = rand.nextInt(3)+1;
+                                tempChip += chipRandomNumber;
+                                chip += chipRandomNumber;
+                                System.out.println("[C] Chip Maker di slot " + i + " -> produksi " + chipRandomNumber + " Chip");
+                            }
+                            else if (arrSlot[i] == 'B') {
+                                int cableRandomNumber = rand.nextInt(3)+2;
+                                tempCable += cableRandomNumber;
+                                cable += cableRandomNumber;
+                                System.out.println("[B] Cable Maker di slot " + i + " -> produksi " + cableRandomNumber + " Cable");
+                            }
+                            else if (arrSlot[i] == 'S') {
+                                int screenRandomNumber = rand.nextInt(2)+1;
+                                tempScreen += screenRandomNumber;
+                                screen += screenRandomNumber;
+                                System.out.println("[S] Screen Maker di slot " + i + " -> produksi " + screenRandomNumber + " Screen");
+                            }
+                        }
+                    }
+                    System.out.println("-------------------------------");
+                    System.out.println("Produksi selesai! Shift " + shift + " berakhir.");
+                    shift++;
+                    System.out.println("Total produksi shift ini:");
+                    System.out.println("Chip: +" + tempChip +"  |  Cable: +"+ tempCable +"  |  Screen: +"+ tempScreen +"  ");
+                    System.out.println("-----------------------------------------");
+                    System.out.println("Shift berikutnya: " + shift);
+                    tempChip = 0;
+                    tempCable = 0;
+                    tempScreen = 0;
+                }
             }
         }
     }
