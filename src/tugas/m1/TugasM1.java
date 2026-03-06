@@ -130,15 +130,20 @@ public class TugasM1 {
                                         if (gold >= 50) {
                                             System.out.print("Pilih slot kosong (0-5): ");
                                             int slotChip = scanner.nextInt();
-
-                                            if (arrSlot[slotChip] == '\0') {
-                                                gold -= 50;
-                                                arrSlot[slotChip] = 'C';
-                                                System.out.println("Chip Maker berhasil dipasang di slot " + slotChip + "!");
+                                            
+                                            if (slotChip > 5 || slotChip < 0) {
+                                                System.out.println("Slot yang tersedia hanya 0 - 5");
                                             }
                                             else {
-                                                System.out.println("Slot ini telah ditempati oleh mesin lain");
-                                            }
+                                                if (arrSlot[slotChip] == '\0') {
+                                                    gold -= 50;
+                                                    arrSlot[slotChip] = 'C';
+                                                    System.out.println("Chip Maker berhasil dipasang di slot " + slotChip + "!");
+                                                }
+                                                else {
+                                                    System.out.println("Slot ini telah ditempati oleh mesin lain");
+                                                }
+                                            }  
                                         }
                                         else {
                                             System.out.println("Gold anda tidak mencukupi untuk membeli mesin ini!");
@@ -148,14 +153,19 @@ public class TugasM1 {
                                         if (gold >= 30) {
                                             System.out.print("Pilih slot kosong (0-5): ");
                                             int slotCable = scanner.nextInt();
-
-                                            if (arrSlot[slotCable] == '\0') {
-                                                gold -= 30;
-                                                arrSlot[slotCable] = 'B';
-                                                System.out.println("Cable Maker berhasil dipasang di slot " + slotCable + "!");                                            
+                                            
+                                            if (slotCable > 5 || slotCable < 0) {
+                                                System.out.println("Slot yang tersedia hanya 0 - 5");
                                             }
                                             else {
-                                                System.out.println("Slot ini telah ditempati oleh mesin lain");
+                                                if (arrSlot[slotCable] == '\0') {
+                                                    gold -= 30;
+                                                    arrSlot[slotCable] = 'B';
+                                                    System.out.println("Cable Maker berhasil dipasang di slot " + slotCable + "!");                                            
+                                                }
+                                                else {
+                                                    System.out.println("Slot ini telah ditempati oleh mesin lain");
+                                                }
                                             }
                                         }
                                         else {
@@ -166,15 +176,20 @@ public class TugasM1 {
                                         if (gold >= 80) {
                                             System.out.print("Pilih slot kosong (0-5): ");
                                             int slotScreen = scanner.nextInt();
-
-                                            if (arrSlot[slotScreen] == '\0') {
-                                                gold -= 80;
-                                                arrSlot[slotScreen] = 'S';
-                                                System.out.println("Screen Maker berhasil dipasang di slot " + slotScreen + "!");
+                                            
+                                            if (slotScreen > 5 || slotScreen < 0) {
+                                                System.out.println("Slot yang tersedia hanya 0 - 5");
                                             }
                                             else {
-                                                System.out.println("Slot ini telah ditempati oleh mesin lain");
-                                            }
+                                                if (arrSlot[slotScreen] == '\0') {
+                                                    gold -= 80;
+                                                    arrSlot[slotScreen] = 'S';
+                                                    System.out.println("Screen Maker berhasil dipasang di slot " + slotScreen + "!");
+                                                }
+                                                else {
+                                                    System.out.println("Slot ini telah ditempati oleh mesin lain");
+                                                }
+                                            }   
                                         }
                                         else {
                                             System.out.println("Gold anda tidak mencukupi untuk membeli mesin ini!");
