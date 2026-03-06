@@ -219,8 +219,52 @@ public class TugasM1 {
                             System.out.println("Error");
                         }
                         else {
-                        
+                            if (menuJual == 1){
+                                System.out.print("Jual berapa Chip? (maks: "+chip+"): ");
+                                int jualChip = scanner.nextInt();
+                                
+                                if (jualChip <= chip) {
+                                    int totalJualChip = 15 * jualChip;
+                                    gold += totalJualChip;
+                                    chip -= jualChip;
+                                    System.out.println("Berhasil jual " + jualChip + " Chip! Gold bertambah " + totalJualChip + ".");
+                                }
+                                else {
+                                    System.out.println("Tidak bisa dijual, dikarenakan melebih dari stock yang tersedia!");
+                                }
+                            }
+                            else if (menuJual == 2){
+                                System.out.print("Jual berapa Cable? (maks: "+cable+"): ");
+                                int jualCable = scanner.nextInt();
+                                
+                                if (jualCable <= cable) {
+                                    int totalJualCable = 8 * jualCable;
+                                    gold += totalJualCable;
+                                    cable -= jualCable;
+                                    System.out.println("Berhasil jual " + jualCable + " Cable! Gold bertambah " + totalJualCable + ".");
+                                }
+                                else {
+                                    System.out.println("Tidak bisa dijual, dikarenakan melebih dari stock yang tersedia!");
+                                }
+                            }
+                            else if (menuJual == 3){
+                                System.out.print("Jual berapa Screen? (maks: "+screen+"): ");
+                                int jualScreen = scanner.nextInt();
+                                
+                                if (jualScreen <= screen) {
+                                    int totalJualScreen = 25 * jualScreen;
+                                    gold += totalJualScreen;
+                                    screen -= jualScreen;
+                                    System.out.println("Berhasil jual " + jualScreen + " Screen! Gold bertambah " + totalJualScreen + ".");
+                                }
+                                else {
+                                    System.out.println("Tidak bisa dijual, dikarenakan melebih dari stock yang tersedia!");
+                                }
+                            }
                         }
+                    }
+                }
+                
             }
         }
     }
