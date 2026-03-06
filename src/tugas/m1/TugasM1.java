@@ -200,7 +200,27 @@ public class TugasM1 {
                         }
                     }      
                 }
-//                
+                else if (menu == 2) {
+                    while (true) {
+                        System.out.println("=== JUAL PRODUK ===");
+                        System.out.println("  1. Chip    (stok:"+chip  + ") -> 15 Gold/pcs");
+                        System.out.println("  2. Cable   (stok:"+cable + ") ->  8 Gold/pcs");
+                        System.out.println("  3. Screen  (stok:"+screen+ ") -> 25 Gold/pcs");
+                        System.out.println("  0. Kembali");
+                        
+                        System.out.print(">> ");
+                        int menuJual = scanner.nextInt();
+                        
+                        if (menuJual == 0) {
+                            System.out.println("Kembali ke halaman utama.");
+                            break;
+                        }
+                        else if (menuJual > 3 || menuJual < 0) {
+                            System.out.println("Error");
+                        }
+                        else {
+                        
+                        }
             }
         }
     }
